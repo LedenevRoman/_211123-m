@@ -1,7 +1,13 @@
 package org.example._2024_01_16;
 
+import org.example._2024_01_17.Student;
+
 public class Classwork {
     public static void main(String[] args) {
+
+        Student student = new Student("211123", "Julia", 30);
+        System.out.println(student);
+
         byte a = 10; //1 байт (-128 до 127)
         short s = 500; //2 байта (-30 000 до + 30 000)
         int w = 1100000; // 4 байта (-2 000 000 000 до + 2 000 000 000)
