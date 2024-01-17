@@ -1,11 +1,11 @@
 package org.example._2024_01_17;
 
 public class Student {
-    String groupNumber;
+    static String groupNumber;
     String name;
     int age;
 
-    public Student(){
+    public Student() {
     }
 
     public Student(String groupNumber, String name, int age) {
