@@ -1,5 +1,7 @@
 package org.example._2024_01_22;
 
+import java.util.Arrays;
+
 public class ClassWork {
     public static void main(String[] args) {
         byte byteValue = 1;
@@ -19,5 +21,6 @@ public class ClassWork {
         System.out.println(charValue);
 
         shortValue = (short) (shortValue + byteValue);
+
     }
 }
