@@ -1,6 +1,7 @@
 package org.example._2024_01_24;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class ClassWork {
     public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class ClassWork {
         Arrays.sort(array4);
         printArray(array4);
 
-        //Arrays.binarySearch() - находит индекс искомого элемента в массиве
+        //Arrays.binarySearch() - находит индекс искомого элемента в отсортированном массиве
         int index = Arrays.binarySearch(array4, 10);
         System.out.println(index);
 

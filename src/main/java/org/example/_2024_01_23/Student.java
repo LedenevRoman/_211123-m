@@ -11,10 +11,9 @@ public class Student {
         this.age = age;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        Student student = (Student) o;
-        return age == student.age && Objects.equals(name, student.name);
+    public boolean equals(Student o) {
+        return age == o.age &&
+                Objects.equals(name, o.name);
     }
 
     @Override
