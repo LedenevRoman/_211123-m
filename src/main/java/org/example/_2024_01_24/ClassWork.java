@@ -1,7 +1,6 @@
 package org.example._2024_01_24;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class ClassWork {
     public static void main(String[] args) {
