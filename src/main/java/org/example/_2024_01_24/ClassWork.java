@@ -1,5 +1,7 @@
 package org.example._2024_01_24;
 
+import org.example._2024_01_25.Main;
+
 import java.util.Arrays;
 
 public class ClassWork {
@@ -33,6 +35,8 @@ public class ClassWork {
         System.out.println(Arrays.equals(array5, array2));
         Arrays.sort(array5);
         System.out.println(Arrays.equals(array5, array2));
+
+        Main.main(new String[]{"Hello"});
 
     }
 
