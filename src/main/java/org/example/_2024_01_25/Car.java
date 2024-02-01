@@ -2,16 +2,19 @@ package org.example._2024_01_25;
 
 public class Car {
     private String brand;
-    private int yearOfManufacture;
-    private String model;
-    private int maxSpeed;
-    private boolean isMoving;
+    public int yearOfManufacture;
+    public String model;
+    public int maxSpeed;
+    public boolean isMoving;
 
     public Car(String brand, int yearOfManufacture, String model, int maxSpeed) {
         this.brand = brand;
         this.yearOfManufacture = yearOfManufacture;
         this.model = model;
         this.maxSpeed = maxSpeed;
+    }
+
+    public Car() {
     }
 
     public void move() {
