@@ -1,5 +1,7 @@
 package org.example._2024_02_01;
 
+import java.util.Objects;
+
 /**
  * Создать класс Person, который содержит:
  * a) поля fullName, age.
@@ -7,11 +9,11 @@ package org.example._2024_02_01;
  * в) Добавьте два конструктора  - Person() и Person(fullName, age).
  * Создайте два объекта этого класса. Один объект инициализируется конструктором Person(), другой - Person(fullName, age).
  */
-public class Person {
+public final class Person {
     private String fullName;
     private int age;
 
-    public Person(){
+    public Person() {
     }
 
     public Person(String fullName, int age) {
@@ -31,7 +33,7 @@ public class Person {
         return fullName;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 
@@ -41,5 +43,32 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Person)) {
+            return false;
+        }
+        Person person = (Person) o;
+        return age == person.age && fullName.equals(person.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 31 * age;
+        result = 31 * result + fullName.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "fullName='" + fullName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
