@@ -1,7 +1,5 @@
 package org.example._2024_02_01;
 
-import java.util.Objects;
-
 /**
  * Создать класс Person, который содержит:
  * a) поля fullName, age.
