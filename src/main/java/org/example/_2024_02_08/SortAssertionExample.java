@@ -15,7 +15,7 @@ public class SortAssertionExample {
         LocalDateTime timeStart = LocalDateTime.now();
         Arrays.sort(array1);
         LocalDateTime timeEnd = LocalDateTime.now();
-        System.out.println("Quick sort time = " + Duration.between(timeStart, timeEnd).getSeconds());
+        System.out.println("Quick sort time = " + Duration.between(timeStart, timeEnd).getNano() / 1000000000.0);
 
         timeStart = LocalDateTime.now();
         BubbleSort.bubbleSort(array2);

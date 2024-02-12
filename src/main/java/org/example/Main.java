@@ -16,6 +16,20 @@ public class Main {
         System.out.println(person1.hashCode());
         System.out.println(person2.hashCode());
 
+        findTwoMinEll(new int[]{1,3,2,3,4,5});
+
+    }
+
+    public static void findTwoMinEll(int[] arr) {
+        int temp1 = Integer.MAX_VALUE;
+        int temp2 = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] <= temp1) temp1 = arr[i];
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if ((arr[i] >= temp1) && arr[i] < temp2) temp2 = arr[i];
+        }
+        System.out.println(temp1 + ", " + temp2);
     }
 
     public static int[] getMinEven(int[] myList) {
