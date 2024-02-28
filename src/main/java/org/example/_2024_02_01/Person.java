@@ -1,5 +1,7 @@
 package org.example._2024_02_01;
 
+import java.util.Objects;
+
 /**
  * Создать класс Person, который содержит:
  * a) поля fullName, age.
@@ -45,14 +47,10 @@ public final class Person {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof Person)) {
-            return false;
-        }
+/*        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;*/
         Person person = (Person) o;
-        return age == person.age && fullName.equals(person.fullName);
+        return age == person.age && Objects.equals(fullName, person.fullName);
     }
 
     @Override
