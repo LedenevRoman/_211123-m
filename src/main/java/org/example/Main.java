@@ -2,6 +2,14 @@ package org.example;
 
 import org.example._2024_02_01.Person;
 
+import java.time.LocalDate;
+import java.time.MonthDay;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
 public class Main {
     public static void main(String[] args) {
         Person person1 = new Person("Ivan Ivanov", 30);
@@ -10,6 +18,15 @@ public class Main {
         String string1 = new String("Hello");
         String string2 = new String("Hello");
 
+        List<String> strings = new ArrayList<>();
+        System.out.println(strings.stream().allMatch(string -> string.equals("aloha")));
+
+        List<Optional<String>> optionals = Arrays.asList(Optional.of("a"), Optional.of("b"), Optional.empty());
+
+        List<String> strings1 = optionals.stream().filter(Optional::isPresent).map(Optional::get).toList();
+
+        System.out.println(strings1);
+
         System.out.println(string1.equals(string2));
 
         System.out.println(person1.equals(person2));
@@ -17,6 +34,9 @@ public class Main {
         System.out.println(person2.hashCode());
 
         findTwoMinEll(new int[]{1,3,2,3,4,5});
+
+        MonthDay monthDay = MonthDay.parse("02-29", DateTimeFormatter.ofPattern("M-d"));
+        System.out.println(monthDay);
 
     }
 

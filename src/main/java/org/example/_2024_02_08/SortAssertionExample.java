@@ -8,18 +8,18 @@ import java.util.Arrays;
 
 public class SortAssertionExample {
     public static void main(String[] args) {
-        int[] array1 = ClassWork.generateArray(1000000);
+        int[] array1 = ClassWork.generateArray(100000);
         int[] array2 = Arrays.copyOf(array1, array1.length);
         System.out.println(Arrays.equals(array2, array1));
 
-        LocalDateTime timeStart = LocalDateTime.now();
+        long timeStart = System.currentTimeMillis();
         Arrays.sort(array1);
-        LocalDateTime timeEnd = LocalDateTime.now();
-        System.out.println("Quick sort time = " + Duration.between(timeStart, timeEnd).getNano() / 1000000000.0);
+        long timeEnd = System.currentTimeMillis();
+        System.out.println("Quick sort time = " + (timeEnd - timeStart) / 1000.0 + " seconds");
 
-        timeStart = LocalDateTime.now();
+        timeStart = System.currentTimeMillis();
         BubbleSort.bubbleSort(array2);
-        timeEnd = LocalDateTime.now();
-        System.out.println("Bubble sort time = " + Duration.between(timeStart, timeEnd).getSeconds());
+        timeEnd = System.currentTimeMillis();
+        System.out.println("Bubble sort time = " + (timeEnd - timeStart) / 1000.0 + " seconds");
     }
 }
